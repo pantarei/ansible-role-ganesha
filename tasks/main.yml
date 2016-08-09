@@ -1,0 +1,37 @@
+---
+# tasks file for hswong3i.nfs_ganesha
+
+- name: include release specific variables
+  include_vars: "{{ ansible_distribution_release }}.yml"
+  tags: hswong3i.nfs_ganesha
+
+- name: apt-add-repository
+  apt_repository:
+    repo: "{{ item.repo }}"
+    state: "{{ item.state }}"
+  with_items: "{{ _apt_repository }}"
+  tags: hswong3i.nfs_ganesha
+
+- name: apt-get install
+  apt:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items: "{{ _apt }}"
+  notify:
+    - restart nfs_ganesha (trusty)
+    - restart nfs_ganesha (xenial)
+  tags: hswong3i.nfs_ganesha
+
+- name: enable service (trusty)
+  service:
+    name: "nfs-ganeshafs"
+    enabled: "yes"
+  notify: restart nfs_ganesha (trusty)
+  tags: hswong3i.nfs_ganesha
+
+- name: enable service (xenial)
+  systemd:
+    name: "nfs-ganeshafs.server"
+    enabled: "yes"
+  notify: restart nfs_ganesha (xenial)
+  tags: hswong3i.nfs_ganesha

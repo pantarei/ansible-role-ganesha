@@ -1,0 +1,14 @@
+---
+# handlers file for hswong3i.nfs_ganesha
+
+- name: restart nfs_ganesha (trusty)
+  service:
+    name: "nfs-ganesha"
+    state: "restarted"
+  when: "{{ ansible_distribution_release == 'trusty' }}"
+
+- name: restart nfs_ganesha (xenial)
+  systemd:
+    name: "nfs-ganesha.service"
+    state: "restarted"
+  when: "{{ ansible_distribution_release == 'xenial' }}"
