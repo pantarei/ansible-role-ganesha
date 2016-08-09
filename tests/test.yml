@@ -1,7 +1,7 @@
 ---
-# test file for hswong3i.nfs_ganesha
+# test file for hswong3i.ganesha
 
 - hosts: localhost
   remote_user: root
   roles:
-    - ansible-role-nfs_ganesha
+    - ansible-role-ganesha

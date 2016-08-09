@@ -36,93 +36,93 @@ Role Variables
 </thead>
 <tbody>
 <tr class="odd">
-<td>nfs_ganesha_idmapd_domain</td>
+<td>ganesha_idmapd_domain</td>
 <td>yes</td>
 <td>localdomain</td>
 <td></td>
 <td>The local NFS-Ganeshav4 domain name.</td>
 </tr>
 <tr class="even">
-<td>nfs_ganesha_idmapd_nobody_group</td>
+<td>ganesha_idmapd_nobody_group</td>
 <td>yes</td>
 <td>nogroup</td>
 <td></td>
 <td>Local group name to be used when a mapping cannot be completed.</td>
 </tr>
 <tr class="odd">
-<td>nfs_ganesha_idmapd_nobody_user</td>
+<td>ganesha_idmapd_nobody_user</td>
 <td>yes</td>
 <td>nobody</td>
 <td></td>
 <td>Local user name to be used when a mapping cannot be completed.</td>
 </tr>
 <tr class="even">
-<td>nfs_ganesha_need_sggd</td>
+<td>ganesha_need_sggd</td>
 <td>yes</td>
 <td>no</td>
 <td></td>
 <td>Do you want to start the gssd daemon? It is required for Kerberos mounts.</td>
 </tr>
 <tr class="odd">
-<td>nfs_ganesha_need_statd</td>
+<td>ganesha_need_statd</td>
 <td>yes</td>
 <td>no</td>
 <td></td>
 <td>Do you want to start the statd daemon? It is not needed for NFS-Ganeshav4.</td>
 </tr>
 <tr class="even">
-<td>nfs_ganesha_need_svcgssd</td>
+<td>ganesha_need_svcgssd</td>
 <td>yes</td>
 <td>no</td>
 <td></td>
 <td>Do you want to start the svcgssd daemon? It is only required for Kerberos exports.</td>
 </tr>
 <tr class="odd">
-<td>nfs_ganesha_rpc_mountd_opts</td>
+<td>ganesha_rpc_mountd_opts</td>
 <td>yes</td>
 <td>--manage-gids</td>
 <td></td>
 <td>Options for rpc.mountd.</td>
 </tr>
 <tr class="even">
-<td>nfs_ganesha_rpc_nfs_ganeshad_count</td>
+<td>ganesha_rpc_ganeshad_count</td>
 <td>yes</td>
 <td>8</td>
 <td></td>
 <td>Number of servers to start up.</td>
 </tr>
 <tr class="odd">
-<td>nfs_ganesha_rpc_nfs_ganeshad_opts</td>
+<td>ganesha_rpc_ganeshad_opts</td>
 <td>yes</td>
 <td></td>
 <td></td>
-<td>Options for rpc.nfs_ganeshad.</td>
+<td>Options for rpc.ganeshad.</td>
 </tr>
 <tr class="even">
-<td>nfs_ganesha_rpc_nfs_ganeshad_priority</td>
+<td>ganesha_rpc_ganeshad_priority</td>
 <td>yes</td>
 <td>0</td>
 <td></td>
 <td>Runtime priority of server.</td>
 </tr>
 <tr class="odd">
-<td>nfs_ganesha_rpc_svcgssd_opts</td>
+<td>ganesha_rpc_svcgssd_opts</td>
 <td>yes</td>
 <td></td>
 <td></td>
 <td>Options for rpc.svcgssd.</td>
 </tr>
 <tr class="even">
-<td>nfs_ganesha_statd_opts</td>
+<td>ganesha_statd_opts</td>
 <td>yes</td>
 <td></td>
 <td></td>
 <td>Options for rpc.statd.</td>
 </tr>
 <tr class="odd">
-<td>nfs_ganesha_exports</td>
+<td>ganesha_exports</td>
 <td>yes</td>
-<td><a href="https://github.com/pantarei/ansible-role-nfs_ganesha/blob/master/defaults/main.yml">defaults/main.yml</a></td>
+<td><a href="https://github.com/pantarei/ansible-role-ganesha/blob/master/defaults/main.yml">defaults/main.yml</a></td>
 <td></td>
 <td>A list of exports in &quot;folder&quot;: &quot;options&quot; style.</td>
 </tr>
@@ -139,7 +139,7 @@ Example Playbook
 
     - hosts: all
       roles:
-        - role: hswong3i.nfs_ganesha
+        - role: hswong3i.ganesha
 
 License
 -------
