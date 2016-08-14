@@ -1,0 +1,7 @@
+---
+# handlers file for hswong3i.ganesha
+
+- name: restart ganesha
+  service: 
+    name: "nfs-ganesha"
+    state: "restarted"
