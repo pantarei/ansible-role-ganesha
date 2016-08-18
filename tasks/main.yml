@@ -34,6 +34,14 @@
 
 - name: enable service
   service:
+    name: "rpcbind"
+    status: "started"
+    enabled: "yes"
+  notify: restart ganesha
+  tags: hswong3i.ganesha
+
+- name: enable service
+  service:
     name: "nfs-ganesha"
     enabled: "yes"
   notify: restart ganesha
