@@ -3,5 +3,7 @@
 
 - name: restart ganesha
   service: 
-    name: "nfs-ganesha"
-    state: "restarted"
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items:
+    - { name: "nfs-ganesha", state: "restarted" }
