@@ -52,16 +52,6 @@
 - name: enable service
   service:
     name: "{{ item.name }}"
-    state: "{{ item.state }}"
-    enabled: "{{ item.enabled }}"
-  with_items:
-    - { name: "rpcbind", state: "started", enabled: "yes" }
-  notify: restart ganesha
-  tags: hswong3i.ganesha
-
-- name: enable service
-  service:
-    name: "{{ item.name }}"
     enabled: "{{ item.enabled }}"
   with_items:
     - { name: "nfs-ganesha", enabled: "yes" }
