@@ -1,2 +1,11 @@
 ---
 # defaults file for hswong3i.ganesha
+
+ganesha_export_defaults_access_type: "rw"
+ganesha_export_defaults_delegations: "rw"
+ganesha_export_defaults_protocols: "4"
+ganesha_export_defaults_sectype: "sys"
+ganesha_export_defaults_squash: "no_root_squash"
+ganesha_export_defaults_transports: "tcp"
+ganesha_nfsv4_delegations: "true"
+ganesha_nfsv4_graceless: "true"
