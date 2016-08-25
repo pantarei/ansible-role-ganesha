@@ -1,7 +1,7 @@
 ---
 # defaults file for hswong3i.ganesha
 
-ganesha_cacheinode_attr_expiration_time: "0"
+ganesha_cacheinode_attr_expiration_time: "60"
 ganesha_export_defaults_access_type: "rw"
 ganesha_export_defaults_delegations: "rw"
 ganesha_export_defaults_protocols: "4"
