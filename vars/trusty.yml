@@ -12,6 +12,6 @@ _apt: [
   { state: "latest", name: "libjemalloc1" },
   { state: "latest", name: "nfs-ganesha" },
   { state: "latest", name: "nfs-ganesha-doc" },
-  { state: "latest", name: "nfs-ganesha-fsal" },
+  { state: "latest", name: "nfs-ganesha-gluster" },
   { state: "latest", name: "python-nfs-ganesha" },
 ]
