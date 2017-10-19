@@ -2,8 +2,10 @@
 # vars file for hswong3i.ganesha (trusty)
 
 _apt_repository: [
-  { state: "present", repo: "ppa:gluster/libntirpc" },
-  { state: "present", repo: "ppa:gluster/nfs-ganesha" },
+  { state: "absent", repo: "ppa:gluster/libntirpc" },
+  { state: "absent", repo: "ppa:gluster/nfs-ganesha" },
+  { state: "present", repo: "ppa:gluster/libntirpc-1.5" },
+  { state: "present", repo: "ppa:gluster/nfs-ganesha-2.5" },
 ]
 _apt: [
   { state: "absent", name: "nfs-kernel-server" },
